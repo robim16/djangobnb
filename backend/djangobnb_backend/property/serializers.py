@@ -3,7 +3,7 @@ from .models import Property
 
 class PropertiesListSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Property,
+        model = Property
         fields = (
             'id',
             'title',
