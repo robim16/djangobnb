@@ -7,6 +7,8 @@ import { useState } from "react"
 import useSignupModal from "../hooks/useSignupModal"
 import CustomButton from "../forms/CustomButton"
 import { useRouter } from "next/navigation"
+import apiService from "@/app/services/apiService"
+import { handleLogin } from "@/app/lib/actions"
 
 const SignupModal = () => {
   const router = useRouter()
@@ -19,15 +21,16 @@ const SignupModal = () => {
   const submitLogin = async () => {
     const formData = {
       email: email,
-      password: password
+      password1: password1,
+      password2: password2
     }
 
-    const response = await apiService.postWithoutToken('/api/auth/login/', JSON.stringify(formData))
+    const response = await apiService.post('/api/auth/login/', JSON.stringify(formData))
 
     if (response.access) {
       handleLogin(response.user.pk, response.access, response.refresh);
 
-      loginModal.close();
+      signupModal.close();
 
       router.push('/')
     } else {
@@ -60,7 +63,7 @@ const SignupModal = () => {
         })}
         <CustomButton
           label="Submit"
-          onClick={() => console.log("submit")}
+          onClick={submitLogin}
         />
 
       </form>
