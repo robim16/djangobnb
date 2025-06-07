@@ -18,14 +18,14 @@ const SignupModal = () => {
   const [password1, setPassword1] = useState("")
   const [password2, setPassword2] = useState("")
 
-  const submitLogin = async () => {
+  const submitSignup = async () => {
     const formData = {
       email: email,
       password1: password1,
       password2: password2
     }
 
-    const response = await apiService.post('/api/auth/login/', JSON.stringify(formData))
+    const response = await apiService.post('/api/auth/register/', JSON.stringify(formData))
 
     if (response.access) {
       handleLogin(response.user.pk, response.access, response.refresh);
@@ -43,7 +43,7 @@ const SignupModal = () => {
     <>
       <h2 className="mb-6 text-2xl">Welcome to Djangobnb</h2>
       <form
-        action={submitLogin}
+        action={submitSignup}
         className="space-y-4">
         <input onChange={(e) => setEmail(e.target.value)} placeholder="Your e-mail address" type="email" className="w-full h-[54px] px-4 border border-gray-300 rounded-xl" />
 
@@ -63,7 +63,7 @@ const SignupModal = () => {
         })}
         <CustomButton
           label="Submit"
-          onClick={submitLogin}
+          onClick={submitSignup}
         />
 
       </form>

@@ -58,7 +58,7 @@ const AddPropertyModal = () => {
                             <textarea
                                 value={dataDescripcion}
                                 onChange={(e) => setDataDescripcion(e.target.value)}
-                                className="w-full p-4 border border-gray-600 rounded-xl"
+                                className="w-full h-[200px] p-4 border border-gray-600 rounded-xl"
                             >
                             </textarea>
                         </div>
