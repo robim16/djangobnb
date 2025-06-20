@@ -42,3 +42,11 @@ class User(AbstractUser, PermissionsMixin):
     USERNAME_FIELD = 'email'
     EMAIL_FIELD = 'email'
     REQUIRED_FIELDS = ['name']
+
+
+
+    def avatar_url(self):
+        if self.avatar:
+            return f"{settings.WEBSITE_URL}{self.avatar.url}"
+        else:
+            return ''
