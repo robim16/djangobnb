@@ -13,7 +13,7 @@ const PropertyDetailPage = async ({params}: { params: {id: string}}) => {
       <div className="w-full mb-4 h-[64vh] overflow-hidden rounded-xl relative">
         <Image
           fill
-          src='/beach_1.jpg'
+          src={property.image_url}
           className="object-cover w-full h-full"
           alt="Beach House" />
 
