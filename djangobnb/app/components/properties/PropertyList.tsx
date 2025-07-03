@@ -21,6 +21,14 @@ const PropertyList:React.FC<PropertyListProps> = ({
 
   const [properties, setProperties] = useState<PropertyType[]>([]);
 
+  const markFavorite = (id: string, is_favorite: boolean) => {
+    const tmpProperties = properties.map((property: PropertyType) => {
+      if (property.id == id) {
+        property.is_favorite = is_favorite
+      }
+    })
+  }
+
   const getProperties = async () => {
     let url = "/api/properties/"
 
