@@ -142,6 +142,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'djangobnb_backend.wsgi.application'
+ASGI_APPLICATION = 'djangobnb_backend.asgi.application'
 
 
 # Database
