@@ -3,6 +3,7 @@
 import useWebSocket, {ReadyState} from "react-use-websocket"
 import CustomButton from "../forms/CustomButton"
 import { ConversationType } from "@/app/inbox/page"
+import { useEffect, useState } from "react"
 
 interface ConversationDetailProps {
   conversation: ConversationType,
@@ -19,12 +20,21 @@ const ConversationDetail: React.FC<ConversationDetailProps> = ({
   const myUser = conversation.users.find((user) => user.id != userId)
   const otherUser = conversation.users.find((user) => user.id != userId)
 
-  const { sendJsonMessage, lastJsonMessage, readyState } = useWebSocket(`${process.env.NEXT_PUBLIC_WS_HOST}/ws/${conversation.id}/?token=${token}`, {
-    share: false,
-    shouldReconnect: () => true,
-  },
+  const { sendJsonMessage, lastJsonMessage, readyState } = useWebSocket(`${process.env.NEXT_PUBLIC_WS_HOST}/ws/${conversation.id}/?token=${token}`, 
+    {
+      share: false,
+      shouldReconnect: () => true,
+    },
   )
 
+  useEffect(() => {
+    console.log("Connection state changed", readyState);
+  })
+
+
+  const sendMessage = () => {
+
+  }
 
   return (
     <>
@@ -43,8 +53,10 @@ const ConversationDetail: React.FC<ConversationDetailProps> = ({
         <input type="text"
           placeholder="Type your message"
           className="w-full p-2 bg-gray-200 rounded-xl"
+          value={newMessage}
+          onChange={(e) => setNewMessage(e.target.value)}
         />
-        <CustomButton className="w-[100px]" label='Send' onClick={() => console.log()} />
+        <CustomButton className="w-[100px]" label='Send' onClick={sendMessage} />
       </div>
     </>
   )

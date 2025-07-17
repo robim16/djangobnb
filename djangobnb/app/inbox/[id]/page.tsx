@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react"
 import { getUserId } from "@/app/lib/actions"
 import apiService from "@/app/services/apiService"
 import { UserType } from "../page";
+import { getAccessToken } from "@/app/lib/actions";
 
 
 
@@ -18,8 +19,9 @@ export type MessageType = {
 
 const ConversationPage = async ({ params }: { params: { id: string } }) => {
     const userId = await getUserId()
+    const token = await getAccessToken()
 
-    if (!userId) {
+    if (!userId || !token) {
         return (
             <main className="max-w-[1500px] max-auto px-6 py-12">
                 <p>You need to be authenticated...</p>
@@ -32,8 +34,9 @@ const ConversationPage = async ({ params }: { params: { id: string } }) => {
     return (
         <main className='max-w-[1500px] mx-auto px-6 pb-6'>
             <ConversationDetail
+                token={token}
                 userId={userId}
-                conversation={conversation} />
+                conversation={conversation.conversation} />
         </main>
     )
 }
