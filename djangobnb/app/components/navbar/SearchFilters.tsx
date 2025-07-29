@@ -1,3 +1,5 @@
+import useSearchModal from "../hooks/useSearchModal"
+
 const SearchFilters = () => {
     return (
         <>
