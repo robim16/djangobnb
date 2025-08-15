@@ -2,8 +2,8 @@ from django.http import JsonResponse
 
 from rest_framework.decorators import api_view
 
-from .models import Conversation, ConversationMessage, ConversationMessageSerializer
-from .serializers import ConversationListSerializer, ConversationDetailSerializer
+from .models import Conversation, ConversationMessage
+from .serializers import ConversationListSerializer, ConversationDetailSerializer, ConversationMessageSerializer
 from useraccount.models import User
 
 
