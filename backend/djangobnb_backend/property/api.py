@@ -45,7 +45,7 @@ def properties_list(request):
             all_matches.append(reservation.property_id)
         
         properties = properties.exclude(id__in=all_matches)
-        
+        # excluye las propiedades que ya están reservadas en las fechas seleccionadas
 
     if (landlord_id):
         properties = properties.filter(landlord_id=landlord_id)
@@ -74,7 +74,7 @@ def properties_list(request):
     if user:
         for property in properties:
             if user in property.favorited.all():
-                favorites.append(property.id)
+                favorites.append(property.id)#filtra las propiedades favoritas del usuario
 
     serializer = PropertiesListSerializer(properties, many=True)
 

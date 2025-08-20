@@ -5,8 +5,9 @@ import { useState } from "react";
 import { Range } from "react-date-range";
 import DatePicker from "../forms/Calendar"; 
 import CustomButton from "../forms/CustomButton";
-import useSearchModal, { SearchQuery } from "@/app/hooks/useSearchModal";
+import useSearchModal, { SearchQuery} from "../hooks/useSearchModal";
 import SelectCountry, {SelectCountryValue} from "../forms/SelectCountry";
+
 
 const initialDateRange = {
     startDate: new Date(),
