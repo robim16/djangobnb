@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const MyReservationsPage = async () => {
     const reservations = await apiService.get('/api/auth/myreservations/')
-    const router = useRouter()
+
     return (
         <main className='max-w-[1500px] mx-auto px-6 pb-6'>
             <h1 className="my-6 text-2xl">My Reservations</h1>
