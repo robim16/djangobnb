@@ -29,8 +29,6 @@ const LandlordDetailPage = async ({ params }: { params: { id: string } }) => {
                                 landlordId={params.id}
                             />
                         )}
-
-                        <ContactButton />
                     </div>
                 </aside>
 
