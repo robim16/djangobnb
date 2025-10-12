@@ -17,10 +17,16 @@ const SignupModal = () => {
   const [errors, setErrors] = useState<string[]>([])
   const [password1, setPassword1] = useState("")
   const [password2, setPassword2] = useState("")
+  const [username, setUsername] = useState("")
+  const [firstname, setFirstname] = useState("")
+  const [lastname, setLastname] = useState("")
 
   const submitSignup = async () => {
     const formData = {
       email: email,
+      // username: username,
+      first_name: firstname,
+      last_name: lastname,
       password1: password1,
       password2: password2
     }
@@ -47,6 +53,12 @@ const SignupModal = () => {
         className="space-y-4">
         <input onChange={(e) => setEmail(e.target.value)} placeholder="Your e-mail address" type="email" className="w-full h-[54px] px-4 border border-gray-300 rounded-xl" />
 
+        <input onChange={(e) => setUsername(e.target.value)} placeholder="Your username" type="text" className="w-full h-[54px] px-4 border border-gray-300 rounded-xl" />
+
+        <input onChange={(e) => setFirstname(e.target.value)} placeholder="Your firstname" type="text" className="w-full h-[54px] px-4 border border-gray-300 rounded-xl" />
+
+        <input onChange={(e) => setLastname(e.target.value)} placeholder="Your lastname" type="text" className="w-full h-[54px] px-4 border border-gray-300 rounded-xl" />
+        
         <input onChange={(e) => setPassword1(e.target.value)} placeholder="Your password" type="password" className="w-full h-[54px] px-4 border border-gray-300 rounded-xl" />
 
         <input onChange={(e) => setPassword2(e.target.value)} placeholder="Repeat password" type="password" className="w-full h-[54px] px-4 border border-gray-300 rounded-xl" />

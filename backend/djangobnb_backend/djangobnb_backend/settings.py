@@ -185,6 +185,11 @@ DATABASES = {
     }
 }
 
+REST_AUTH_REGISTER_SERIALIZERS = {
+    'REGISTER_SERIALIZER': 'useraccount.serializers.CustomRegisterSerializer'
+}
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators

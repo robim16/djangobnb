@@ -1,26 +1,24 @@
-"use client"
 
-import Select from "react-select/base"
+'use client';
+
+import Select from 'react-select';
 import useCountries from "../hooks/useCountries"
-
 
 export type SelectCountryValue = {
     label: string;
     value: string;
 }
 
-
 interface SelectCountryProps {
-    value?: SelectCountryValue
-    onChange: (value: SelectCountryValue) => void
+    value?: SelectCountryValue;
+    onChange: (value: SelectCountryValue) => void;
 }
 
 const SelectCountry: React.FC<SelectCountryProps> = ({
     value,
     onChange
 }) => {
-
-    const { getAll } = useCountries()
+    const {getAll} = useCountries();
 
     return (
         <>
@@ -35,5 +33,4 @@ const SelectCountry: React.FC<SelectCountryProps> = ({
     )
 }
 
-
-export default SelectCountry
+export default SelectCountry;
