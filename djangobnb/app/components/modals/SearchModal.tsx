@@ -24,8 +24,6 @@ const SearchModal = () => {
     const [numBathrooms, setNumBathrooms] = useState<string>('0');
     const [dateRange, setDateRange] = useState<Range>(initialDateRange);
 
-    //
-    //
 
     const closeAndSearch = () => {
         const newSearchQuery: SearchQuery = {
@@ -42,8 +40,6 @@ const SearchModal = () => {
         searchModal.close();
     }
 
-    //
-    // Set date range
 
     const _setDateRange = (selection: Range) => {
         if (searchModal.step === 'checkin') {
@@ -55,8 +51,7 @@ const SearchModal = () => {
         setDateRange(selection);
     }
 
-    //
-    // Contents
+
 
     const contentLocation = (
         <>
@@ -75,6 +70,7 @@ const SearchModal = () => {
             </div>
         </>
     )
+    // busqueda por pais, se abre el modal con step checkin
 
     const contentCheckin = (
         <>
@@ -174,6 +170,7 @@ const SearchModal = () => {
                     label="Search"
                     onClick={closeAndSearch}
                 />
+                {/* crea la logica para que al darle a search se guarde la busqueda en el store y se cierre el modal */}
             </div>
         </>
     )
@@ -195,6 +192,7 @@ const SearchModal = () => {
             close={searchModal.close}
             isOpen={searchModal.isOpen}
         />
+        // si es true se ve el modal, si es false no, se controla desde el hook useSearchModal
     )
 }
 

@@ -23,7 +23,7 @@ interface SearchModalStore {
 const useSearchModal = create<SearchModalStore>((set) =>({
     isOpen: false,
     step: '',
-    open: (step) => set({ isOpen: true, step: step }),
+    open: (step) => set({ isOpen: true, step: step }),//setea el step, ejemplo 'location'
     close: () => set({ isOpen: false }),
     setQuery: (query: SearchQuery) => set({query: query}),
     query: {
@@ -37,5 +37,5 @@ const useSearchModal = create<SearchModalStore>((set) =>({
     }
 }))
 
-
+//store de zustand para manejar el estado del modal de busqueda
 export default useSearchModal

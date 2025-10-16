@@ -63,7 +63,7 @@ export async function handleLogin(userId: string, accessToken: string, refreshTo
         maxAge: 60 * 60 * 24 * 7, // One week
         path: '/'
     });
-}
+}// guarda las cookies en el navegador del cliente
 
 
 export async function resetAuthCookies() {

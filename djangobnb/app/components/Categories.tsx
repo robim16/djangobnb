@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import useSearchModal, {SearchQuery} from '../hooks/useSearchModal';
+import useSearchModal, {SearchQuery} from '../components/hooks/useSearchModal';
 
 const Categories = () => {
     const searchModal = useSearchModal();
