@@ -1,0 +1,42 @@
+[INFO] 2025-10-19 21:46:53,958 django.utils.autoreload — Watching for file changes with StatReloader
+[INFO] 2025-10-19 21:47:55,349 django.channels.server — HTTP OPTIONS /api/auth/login/ 200 [0.01, 172.18.0.1:36642]
+[INFO] 2025-10-19 21:47:55,619 django.channels.server — HTTP POST /api/auth/login/ 200 [0.26, 172.18.0.1:36642]
+[INFO] 2025-10-19 21:52:43,942 django.channels.server — HTTP OPTIONS /api/properties/?numGuests=1 200 [0.00, 172.18.0.1:43588]
+[INFO] 2025-10-19 21:52:43,963 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-19 21:52:43,973 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-19 21:52:43,975 property.api — Data serializada: []
+[INFO] 2025-10-19 21:52:43,978 django.channels.server — HTTP GET /api/properties/?numGuests=1 200 [0.03, 172.18.0.1:43588]
+[INFO] 2025-10-19 21:55:37,868 django.channels.server — HTTP POST /api/auth/login/ 200 [0.23, 172.18.0.1:46994]
+[INFO] 2025-10-19 21:55:50,331 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-19 21:55:50,333 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-19 21:55:50,335 property.api — Data serializada: []
+[INFO] 2025-10-19 21:55:50,339 django.channels.server — HTTP GET /api/properties/?numGuests=1 200 [0.02, 172.18.0.1:46994]
+[INFO] 2025-10-19 21:56:03,257 django.channels.server — HTTP OPTIONS /api/properties/?landlord_id=3b3796fc-947c-492f-a5d9-17250b989a69 200 [0.01, 172.18.0.1:46994]
+[INFO] 2025-10-19 21:56:03,306 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-19 21:56:03,308 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-19 21:56:03,320 property.api — Data serializada: [OrderedDict({'id': '924a8b75-3fb3-4b91-8064-52d7be15a3eb', 'title': 'Beach', 'price_per_night': 60, 'image_url': 'http://localhost:8000/media/uploads/properties/beach_1_yBaIicG.jpg'})]
+[INFO] 2025-10-19 21:56:03,326 django.channels.server — HTTP GET /api/properties/?landlord_id=3b3796fc-947c-492f-a5d9-17250b989a69 200 [0.04, 172.18.0.1:46994]
+[INFO] 2025-10-19 21:56:03,437 django.channels.server — HTTP GET /media/uploads/properties/beach_1_yBaIicG.jpg 200 [0.05, 172.18.0.1:60754]
+[INFO] 2025-10-19 21:56:03,758 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-19 21:56:03,760 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-19 21:56:03,765 property.api — Data serializada: [OrderedDict({'id': '924a8b75-3fb3-4b91-8064-52d7be15a3eb', 'title': 'Beach', 'price_per_night': 60, 'image_url': 'http://localhost:8000/media/uploads/properties/beach_1_yBaIicG.jpg'})]
+[INFO] 2025-10-19 21:56:03,769 django.channels.server — HTTP GET /api/properties/?landlord_id=3b3796fc-947c-492f-a5d9-17250b989a69 200 [0.02, 172.18.0.1:46994]
+[INFO] 2025-10-19 21:59:09,651 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-19 21:59:09,655 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-19 21:59:09,657 property.api — Data serializada: []
+[INFO] 2025-10-19 21:59:09,661 django.channels.server — HTTP GET /api/properties/?numGuests=1 200 [0.04, 172.18.0.1:46128]
+[INFO] 2025-10-19 21:59:11,031 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-19 21:59:11,035 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-19 21:59:11,036 property.api — Data serializada: []
+[INFO] 2025-10-19 21:59:11,040 django.channels.server — HTTP GET /api/properties/?numGuests=1 200 [0.02, 172.18.0.1:46128]
+[INFO] 2025-10-19 21:59:14,353 django.channels.server — HTTP OPTIONS /api/properties/?numGuests=1&category=beach 200 [0.00, 172.18.0.1:46128]
+[INFO] 2025-10-19 21:59:14,397 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-19 21:59:14,398 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-19 21:59:14,400 property.api — Data serializada: []
+[INFO] 2025-10-19 21:59:14,404 django.channels.server — HTTP GET /api/properties/?numGuests=1&category=beach 200 [0.02, 172.18.0.1:46128]
+[INFO] 2025-10-19 22:00:16,543 django.utils.autoreload — /usr/src/djangobnb_backend/property/api.py changed, reloading.
+[INFO] 2025-10-19 22:00:18,626 django.utils.autoreload — Watching for file changes with StatReloader
+[INFO] 2025-10-19 22:00:21,730 django.utils.autoreload — /usr/src/djangobnb_backend/property/api.py changed, reloading.
+[INFO] 2025-10-19 22:00:23,460 django.utils.autoreload — Watching for file changes with StatReloader
+[INFO] 2025-10-19 22:00:25,875 django.utils.autoreload — /usr/src/djangobnb_backend/property/api.py changed, reloading.
+[INFO] 2025-10-19 22:00:27,579 django.utils.autoreload — Watching for file changes with StatReloader

@@ -1,22 +1,24 @@
-import Image from "next/image"
-import { PropertyType } from "./PropertyList"
-import { useRouter } from "next/navigation"
-import FavoriteButtton from "../FavoriteButton"
+import Image from "next/image";
+import { PropertyType } from "./PropertyList";
+import { useRouter } from "next/navigation";
+import FavoriteButton from "../FavoriteButton";
 
 interface PropertyProps {
     property: PropertyType,
-    markFavorite?: (is_favorite: boolean) => void
+    markFavorite?: (is_favorite: boolean) => void;
 }
-
 
 const PropertyListItem: React.FC<PropertyProps> = ({
     property,
     markFavorite
 }) => {
+    const router = useRouter();
 
-    const router = useRouter()
     return (
-        <div className="cursor-pointer">
+        <div 
+            className="cursor-pointer"
+            onClick={() => router.push(`/properties/${property.id}`)}
+        >
             <div className="relative overflow-hidden aspect-square rounded-xl">
                 <Image
                     fill
@@ -27,7 +29,7 @@ const PropertyListItem: React.FC<PropertyProps> = ({
                 />
 
                 {markFavorite && (
-                    <FavoriteButtton 
+                    <FavoriteButton
                         id={property.id}
                         is_favorite={property.is_favorite}
                         markFavorite={(is_favorite) => markFavorite(is_favorite)}
@@ -46,4 +48,4 @@ const PropertyListItem: React.FC<PropertyProps> = ({
     )
 }
 
-export default PropertyListItem
+export default PropertyListItem;

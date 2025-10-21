@@ -7,6 +7,10 @@ from .models import Property, Reservation
 from .serializers import PropertiesListSerializer, PropertiesDetailSerializer, ReservationsListSerializer
 from useraccount.models import User
 
+import logging
+logger = logging.getLogger(__name__)
+
+
 @api_view(['GET'])
 @authentication_classes([])
 @permission_classes([])
@@ -18,12 +22,18 @@ def properties_list(request):
         user_id = token.payload['user_id']
         user = User.objects.get(pk=user_id)
 
+        logger.info(f'Usuario autenticado: {user.email}')
+
     except Exception as e:
+        logger.warning(f'Error al autenticar token: {e}')
         user = None
 
 
     favorites = []
     properties = Property.objects.all()
+
+    logger.debug(f'Total propiedades encontradas: {properties.count()}')
+    logger.debug(f'Propiedades encontradas: {properties}')
 
     is_favorites = request.GET.get('is_favorites', '')
     landlord_id = request.GET.get('landlord_id', '')
@@ -77,6 +87,8 @@ def properties_list(request):
                 favorites.append(property.id)#filtra las propiedades favoritas del usuario
 
     serializer = PropertiesListSerializer(properties, many=True)
+
+    logger.debug(f'Data serializada: {serializer.data}')
 
     return JsonResponse({
         'data': serializer.data,

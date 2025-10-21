@@ -1,0 +1,122 @@
+[INFO] 2025-10-20 21:34:45,024 django.utils.autoreload — Watching for file changes with StatReloader
+[WARNING] 2025-10-20 21:40:42,028 django.security.csrf — Forbidden (CSRF cookie not set.): /api/auth/token/refresh/
+[WARNING] 2025-10-20 21:40:42,039 django.channels.server — HTTP POST /api/auth/token/refresh/ 403 [0.04, 172.18.0.1:60840]
+[INFO] 2025-10-20 21:40:46,143 django.channels.server — HTTP OPTIONS /api/properties/?numGuests=1 200 [0.01, 172.18.0.1:60852]
+[WARNING] 2025-10-20 21:40:46,212 property.api — Error al autenticar token: Token is invalid or expired
+[DEBUG] 2025-10-20 21:40:46,266 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-20 21:40:46,285 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>]>
+[DEBUG] 2025-10-20 21:40:46,294 property.api — Data serializada: []
+[INFO] 2025-10-20 21:40:46,303 django.channels.server — HTTP GET /api/properties/?numGuests=1 200 [0.15, 172.18.0.1:60852]
+[INFO] 2025-10-20 21:41:32,992 django.channels.server — HTTP OPTIONS /api/auth/login/ 200 [0.01, 172.18.0.1:48014]
+[INFO] 2025-10-20 21:41:33,397 django.channels.server — HTTP POST /api/auth/login/ 200 [0.39, 172.18.0.1:48014]
+[INFO] 2025-10-20 21:41:41,658 django.channels.server — HTTP OPTIONS /api/properties/?numGuests=1&category=beach 200 [0.00, 172.18.0.1:48014]
+[INFO] 2025-10-20 21:41:41,686 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 21:41:41,688 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-20 21:41:41,689 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>]>
+[DEBUG] 2025-10-20 21:41:41,693 property.api — Data serializada: []
+[INFO] 2025-10-20 21:41:41,696 django.channels.server — HTTP GET /api/properties/?numGuests=1&category=beach 200 [0.03, 172.18.0.1:48014]
+[INFO] 2025-10-20 21:41:52,553 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 21:41:52,557 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-20 21:41:52,559 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>]>
+[DEBUG] 2025-10-20 21:41:52,562 property.api — Data serializada: []
+[INFO] 2025-10-20 21:41:52,567 django.channels.server — HTTP GET /api/properties/?numGuests=1 200 [0.03, 172.18.0.1:48014]
+[INFO] 2025-10-20 21:42:04,323 django.channels.server — HTTP OPTIONS /api/properties/?landlord_id=3b3796fc-947c-492f-a5d9-17250b989a69 200 [0.00, 172.18.0.1:48014]
+[INFO] 2025-10-20 21:42:04,351 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 21:42:04,353 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-20 21:42:04,357 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>]>
+[DEBUG] 2025-10-20 21:42:04,375 property.api — Data serializada: [OrderedDict({'id': '924a8b75-3fb3-4b91-8064-52d7be15a3eb', 'title': 'Beach', 'price_per_night': 60, 'image_url': 'http://localhost:8000/media/uploads/properties/beach_1_yBaIicG.jpg'})]
+[INFO] 2025-10-20 21:42:04,379 django.channels.server — HTTP GET /api/properties/?landlord_id=3b3796fc-947c-492f-a5d9-17250b989a69 200 [0.05, 172.18.0.1:48014]
+[INFO] 2025-10-20 21:42:04,610 django.channels.server — HTTP GET /media/uploads/properties/beach_1_yBaIicG.jpg 200 [0.03, 172.18.0.1:39574]
+[INFO] 2025-10-20 21:42:05,275 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 21:42:05,278 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-20 21:42:05,279 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>]>
+[DEBUG] 2025-10-20 21:42:05,290 property.api — Data serializada: [OrderedDict({'id': '924a8b75-3fb3-4b91-8064-52d7be15a3eb', 'title': 'Beach', 'price_per_night': 60, 'image_url': 'http://localhost:8000/media/uploads/properties/beach_1_yBaIicG.jpg'})]
+[INFO] 2025-10-20 21:42:05,294 django.channels.server — HTTP GET /api/properties/?landlord_id=3b3796fc-947c-492f-a5d9-17250b989a69 200 [0.04, 172.18.0.1:48014]
+[INFO] 2025-10-20 21:42:15,360 django.channels.server — HTTP OPTIONS /api/properties/924a8b75-3fb3-4b91-8064-52d7be15a3eb/toggle_favorite/ 200 [0.01, 172.18.0.1:48014]
+[INFO] 2025-10-20 21:42:15,425 django.channels.server — HTTP POST /api/properties/924a8b75-3fb3-4b91-8064-52d7be15a3eb/toggle_favorite/ 200 [0.05, 172.18.0.1:48014]
+[INFO] 2025-10-20 21:48:00,773 django.channels.server — HTTP OPTIONS /api/properties/?is_favorites=true 200 [0.02, 172.18.0.1:37448]
+[INFO] 2025-10-20 21:48:00,825 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 21:48:00,830 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-20 21:48:00,834 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>]>
+[DEBUG] 2025-10-20 21:48:00,844 property.api — Data serializada: [OrderedDict({'id': '924a8b75-3fb3-4b91-8064-52d7be15a3eb', 'title': 'Beach', 'price_per_night': 60, 'image_url': 'http://localhost:8000/media/uploads/properties/beach_1_yBaIicG.jpg'})]
+[INFO] 2025-10-20 21:48:00,847 django.channels.server — HTTP GET /api/properties/?is_favorites=true 200 [0.06, 172.18.0.1:37448]
+[INFO] 2025-10-20 21:48:00,931 django.channels.server — HTTP GET /media/uploads/properties/beach_1_yBaIicG.jpg 200 [0.03, 172.18.0.1:37454]
+[INFO] 2025-10-20 21:49:23,979 django.utils.autoreload — Watching for file changes with StatReloader
+[INFO] 2025-10-20 21:50:09,158 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 21:50:09,176 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-20 21:50:09,186 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>]>
+[DEBUG] 2025-10-20 21:50:09,228 property.api — Data serializada: [OrderedDict({'id': '924a8b75-3fb3-4b91-8064-52d7be15a3eb', 'title': 'Beach', 'price_per_night': 60, 'image_url': 'http://localhost:8000/media/uploads/properties/beach_1_yBaIicG.jpg'})]
+[INFO] 2025-10-20 21:50:09,247 django.channels.server — HTTP GET /api/properties/?is_favorites=true 200 [0.26, 172.18.0.1:39526]
+[INFO] 2025-10-20 21:50:09,592 django.channels.server — HTTP GET /media/uploads/properties/beach_1_yBaIicG.jpg 200 [0.09, 172.18.0.1:39540]
+[INFO] 2025-10-20 21:54:25,921 django.channels.server — HTTP GET /api/auth/myreservations/ 200 [0.03, 172.18.0.1:39024]
+[INFO] 2025-10-20 21:54:50,914 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 21:54:50,917 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-20 21:54:50,918 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>]>
+[DEBUG] 2025-10-20 21:54:50,920 property.api — Data serializada: []
+[INFO] 2025-10-20 21:54:50,923 django.channels.server — HTTP GET /api/properties/?numGuests=1 200 [0.03, 172.18.0.1:46542]
+[INFO] 2025-10-20 21:54:51,704 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 21:54:51,706 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-20 21:54:51,712 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>]>
+[DEBUG] 2025-10-20 21:54:51,715 property.api — Data serializada: []
+[INFO] 2025-10-20 21:54:51,719 django.channels.server — HTTP GET /api/properties/?numGuests=1 200 [0.03, 172.18.0.1:46542]
+[INFO] 2025-10-20 21:55:16,347 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 21:55:16,349 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-20 21:55:16,351 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>]>
+[DEBUG] 2025-10-20 21:55:16,355 property.api — Data serializada: []
+[INFO] 2025-10-20 21:55:16,361 django.channels.server — HTTP GET /api/properties/?numGuests=1 200 [0.06, 172.18.0.1:46542]
+[INFO] 2025-10-20 21:55:22,056 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 21:55:22,058 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-20 21:55:22,062 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>]>
+[DEBUG] 2025-10-20 21:55:22,065 property.api — Data serializada: []
+[INFO] 2025-10-20 21:55:22,067 django.channels.server — HTTP GET /api/properties/?numGuests=1&category=beach 200 [0.05, 172.18.0.1:46542]
+[INFO] 2025-10-20 21:55:53,176 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 21:55:53,179 property.api — Total propiedades encontradas: 1
+[DEBUG] 2025-10-20 21:55:53,182 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>]>
+[DEBUG] 2025-10-20 21:55:53,186 property.api — Data serializada: []
+[INFO] 2025-10-20 21:55:53,191 django.channels.server — HTTP GET /api/properties/?numGuests=1 200 [0.03, 172.18.0.1:46542]
+[INFO] 2025-10-20 22:00:07,292 django.channels.server — HTTP OPTIONS /api/properties/create/ 200 [0.00, 172.18.0.1:59198]
+[INFO] 2025-10-20 22:00:07,499 django.channels.server — HTTP POST /api/properties/create/ 200 [0.18, 172.18.0.1:59198]
+[INFO] 2025-10-20 22:00:08,974 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 22:00:08,981 property.api — Total propiedades encontradas: 2
+[DEBUG] 2025-10-20 22:00:08,983 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>, <Property: Property object (38e53dba-b3bb-4148-b6bc-66e01602f155)>]>
+[DEBUG] 2025-10-20 22:00:08,987 property.api — Data serializada: [OrderedDict({'id': '38e53dba-b3bb-4148-b6bc-66e01602f155', 'title': 'cancun', 'price_per_night': 70, 'image_url': 'http://localhost:8000/media/uploads/properties/cancun.webp'})]
+[INFO] 2025-10-20 22:00:08,990 django.channels.server — HTTP GET /api/properties/?numGuests=1 200 [0.03, 172.18.0.1:59198]
+[INFO] 2025-10-20 22:00:09,080 django.channels.server — HTTP GET /media/uploads/properties/cancun.webp 200 [0.01, 172.18.0.1:59204]
+[INFO] 2025-10-20 22:00:30,702 django.channels.server — HTTP GET /media/uploads/properties/cancun.webp 200 [0.03, 172.18.0.1:37314]
+[INFO] 2025-10-20 22:00:35,215 django.channels.server — HTTP OPTIONS /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/toggle_favorite/ 200 [0.00, 172.18.0.1:59198]
+[INFO] 2025-10-20 22:00:35,251 django.channels.server — HTTP POST /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/toggle_favorite/ 200 [0.03, 172.18.0.1:59198]
+[INFO] 2025-10-20 22:00:40,192 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 22:00:40,194 property.api — Total propiedades encontradas: 2
+[DEBUG] 2025-10-20 22:00:40,195 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>, <Property: Property object (38e53dba-b3bb-4148-b6bc-66e01602f155)>]>
+[DEBUG] 2025-10-20 22:00:40,201 property.api — Data serializada: [OrderedDict({'id': '924a8b75-3fb3-4b91-8064-52d7be15a3eb', 'title': 'Beach', 'price_per_night': 60, 'image_url': 'http://localhost:8000/media/uploads/properties/beach_1_yBaIicG.jpg'}), OrderedDict({'id': '38e53dba-b3bb-4148-b6bc-66e01602f155', 'title': 'cancun', 'price_per_night': 70, 'image_url': 'http://localhost:8000/media/uploads/properties/cancun.webp'})]
+[INFO] 2025-10-20 22:00:40,205 django.channels.server — HTTP GET /api/properties/?is_favorites=true 200 [0.03, 172.18.0.1:59198]
+[INFO] 2025-10-20 22:00:40,368 django.channels.server — HTTP GET /media/uploads/properties/beach_1_yBaIicG.jpg 200 [0.01, 172.18.0.1:37328]
+[INFO] 2025-10-20 22:00:41,222 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 22:00:41,231 property.api — Total propiedades encontradas: 2
+[DEBUG] 2025-10-20 22:00:41,236 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>, <Property: Property object (38e53dba-b3bb-4148-b6bc-66e01602f155)>]>
+[DEBUG] 2025-10-20 22:00:41,242 property.api — Data serializada: [OrderedDict({'id': '924a8b75-3fb3-4b91-8064-52d7be15a3eb', 'title': 'Beach', 'price_per_night': 60, 'image_url': 'http://localhost:8000/media/uploads/properties/beach_1_yBaIicG.jpg'}), OrderedDict({'id': '38e53dba-b3bb-4148-b6bc-66e01602f155', 'title': 'cancun', 'price_per_night': 70, 'image_url': 'http://localhost:8000/media/uploads/properties/cancun.webp'})]
+[INFO] 2025-10-20 22:00:41,245 django.channels.server — HTTP GET /api/properties/?is_favorites=true 200 [0.04, 172.18.0.1:59198]
+[INFO] 2025-10-20 22:01:37,130 django.channels.server — HTTP GET /api/auth/myreservations/ 200 [0.03, 172.18.0.1:35964]
+[INFO] 2025-10-20 22:09:19,413 django.channels.server — HTTP OPTIONS /api/properties/?country=Mexico&numGuests=1&numBedrooms=1&numBathrooms=1&checkin=2025-10-24&checkout=2025-10-31 200 [0.01, 172.18.0.1:36034]
+[INFO] 2025-10-20 22:09:19,435 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 22:09:19,437 property.api — Total propiedades encontradas: 2
+[DEBUG] 2025-10-20 22:09:19,438 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>, <Property: Property object (38e53dba-b3bb-4148-b6bc-66e01602f155)>]>
+[DEBUG] 2025-10-20 22:09:19,444 property.api — Data serializada: [OrderedDict({'id': '38e53dba-b3bb-4148-b6bc-66e01602f155', 'title': 'cancun', 'price_per_night': 70, 'image_url': 'http://localhost:8000/media/uploads/properties/cancun.webp'})]
+[INFO] 2025-10-20 22:09:19,447 django.channels.server — HTTP GET /api/properties/?country=Mexico&numGuests=1&numBedrooms=1&numBathrooms=1&checkin=2025-10-24&checkout=2025-10-31 200 [0.03, 172.18.0.1:36034]
+[INFO] 2025-10-20 22:09:19,564 django.channels.server — HTTP GET /media/uploads/properties/cancun.webp 200 [0.02, 172.18.0.1:36044]
+[INFO] 2025-10-20 22:09:21,105 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 22:09:21,107 property.api — Total propiedades encontradas: 2
+[DEBUG] 2025-10-20 22:09:21,109 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>, <Property: Property object (38e53dba-b3bb-4148-b6bc-66e01602f155)>]>
+[DEBUG] 2025-10-20 22:09:21,115 property.api — Data serializada: [OrderedDict({'id': '38e53dba-b3bb-4148-b6bc-66e01602f155', 'title': 'cancun', 'price_per_night': 70, 'image_url': 'http://localhost:8000/media/uploads/properties/cancun.webp'})]
+[INFO] 2025-10-20 22:09:21,118 django.channels.server — HTTP GET /api/properties/?country=Mexico&numGuests=1&numBedrooms=1&numBathrooms=1&checkin=2025-10-24&checkout=2025-10-31 200 [0.03, 172.18.0.1:36034]
+[INFO] 2025-10-20 22:09:36,906 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 22:09:36,913 property.api — Total propiedades encontradas: 2
+[DEBUG] 2025-10-20 22:09:36,914 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>, <Property: Property object (38e53dba-b3bb-4148-b6bc-66e01602f155)>]>
+[DEBUG] 2025-10-20 22:09:36,921 property.api — Data serializada: [OrderedDict({'id': '924a8b75-3fb3-4b91-8064-52d7be15a3eb', 'title': 'Beach', 'price_per_night': 60, 'image_url': 'http://localhost:8000/media/uploads/properties/beach_1_yBaIicG.jpg'}), OrderedDict({'id': '38e53dba-b3bb-4148-b6bc-66e01602f155', 'title': 'cancun', 'price_per_night': 70, 'image_url': 'http://localhost:8000/media/uploads/properties/cancun.webp'})]
+[INFO] 2025-10-20 22:09:36,928 django.channels.server — HTTP GET /api/properties/?is_favorites=true 200 [0.04, 172.18.0.1:36034]
+[INFO] 2025-10-20 22:09:37,112 django.channels.server — HTTP GET /media/uploads/properties/beach_1_yBaIicG.jpg 200 [0.02, 172.18.0.1:56516]
+[INFO] 2025-10-20 22:09:38,415 property.api — Usuario autenticado: exampleuser123@gmail.com
+[DEBUG] 2025-10-20 22:09:38,417 property.api — Total propiedades encontradas: 2
+[DEBUG] 2025-10-20 22:09:38,418 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>, <Property: Property object (38e53dba-b3bb-4148-b6bc-66e01602f155)>]>
+[DEBUG] 2025-10-20 22:09:38,424 property.api — Data serializada: [OrderedDict({'id': '924a8b75-3fb3-4b91-8064-52d7be15a3eb', 'title': 'Beach', 'price_per_night': 60, 'image_url': 'http://localhost:8000/media/uploads/properties/beach_1_yBaIicG.jpg'}), OrderedDict({'id': '38e53dba-b3bb-4148-b6bc-66e01602f155', 'title': 'cancun', 'price_per_night': 70, 'image_url': 'http://localhost:8000/media/uploads/properties/cancun.webp'})]
+[INFO] 2025-10-20 22:09:38,428 django.channels.server — HTTP GET /api/properties/?is_favorites=true 200 [0.05, 172.18.0.1:36034]
