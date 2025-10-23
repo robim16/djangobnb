@@ -1,0 +1,492 @@
+[INFO] 2025-10-21 21:30:04,775 django.utils.autoreload — Watching for file changes with StatReloader
+[WARNING] 2025-10-21 21:31:10,347 django.security.csrf — Forbidden (CSRF cookie not set.): /api/auth/token/refresh/
+[WARNING] 2025-10-21 21:31:10,356 django.channels.server — HTTP POST /api/auth/token/refresh/ 403 [0.02, 172.18.0.1:34428]
+[INFO] 2025-10-21 21:31:12,134 django.channels.server — HTTP OPTIONS /api/properties/?numGuests=1 200 [0.00, 172.18.0.1:34440]
+[WARNING] 2025-10-21 21:31:12,168 property.api — Error al autenticar token: Token is invalid or expired
+[DEBUG] 2025-10-21 21:31:12,186 property.api — Total propiedades encontradas: 2
+[DEBUG] 2025-10-21 21:31:12,189 property.api — Propiedades encontradas: <QuerySet [<Property: Property object (924a8b75-3fb3-4b91-8064-52d7be15a3eb)>, <Property: Property object (38e53dba-b3bb-4148-b6bc-66e01602f155)>]>
+[DEBUG] 2025-10-21 21:31:12,193 property.api — Data serializada: [OrderedDict({'id': '38e53dba-b3bb-4148-b6bc-66e01602f155', 'title': 'cancun', 'price_per_night': 70, 'image_url': 'http://localhost:8000/media/uploads/properties/cancun.webp'})]
+[INFO] 2025-10-21 21:31:12,198 django.channels.server — HTTP GET /api/properties/?numGuests=1 200 [0.05, 172.18.0.1:34440]
+[INFO] 2025-10-21 21:31:12,277 django.channels.server — HTTP GET /media/uploads/properties/cancun.webp 200 [0.05, 172.18.0.1:34428]
+[INFO] 2025-10-21 21:31:52,765 django.channels.server — HTTP OPTIONS /api/auth/login/ 200 [0.00, 172.18.0.1:48760]
+[INFO] 2025-10-21 21:31:52,946 django.channels.server — HTTP POST /api/auth/login/ 200 [0.18, 172.18.0.1:48760]
+[INFO] 2025-10-21 21:32:33,498 django.channels.server — HTTP POST /api/auth/login/ 200 [0.17, 172.18.0.1:60096]
+[INFO] 2025-10-21 21:32:47,970 django.channels.server — HTTP GET /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155 200 [0.07, 172.18.0.1:51634]
+[INFO] 2025-10-21 21:32:48,501 django.channels.server — HTTP GET /media/uploads/properties/cancun.webp 200 [0.07, 172.18.0.1:51634]
+[INFO] 2025-10-21 21:32:50,050 django.channels.server — HTTP OPTIONS /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/ 200 [0.01, 172.18.0.1:51642]
+[ERROR] 2025-10-21 21:32:50,390 django.request — Internal Server Error: /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/djangobnb_backend/property/api.py", line 118, in property_reservations
+    serializer = ReservationsListSerializer(reservations, safe=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'safe'
+[ERROR] 2025-10-21 21:32:50,461 django.channels.server — HTTP GET /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/ 500 [0.40, 172.18.0.1:51642]
+[ERROR] 2025-10-21 21:32:51,519 django.request — Internal Server Error: /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/djangobnb_backend/property/api.py", line 118, in property_reservations
+    serializer = ReservationsListSerializer(reservations, safe=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'safe'
+[ERROR] 2025-10-21 21:32:51,562 django.channels.server — HTTP GET /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/ 500 [0.12, 172.18.0.1:51642]
+[ERROR] 2025-10-21 21:35:16,442 django.request — Internal Server Error: /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/djangobnb_backend/property/api.py", line 118, in property_reservations
+    serializer = ReservationsListSerializer(reservations, safe=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'safe'
+[ERROR] 2025-10-21 21:35:16,497 django.channels.server — HTTP GET /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/ 500 [0.64, 172.18.0.1:48504]
+[ERROR] 2025-10-21 21:35:17,445 django.request — Internal Server Error: /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/djangobnb_backend/property/api.py", line 118, in property_reservations
+    serializer = ReservationsListSerializer(reservations, safe=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'safe'
+[ERROR] 2025-10-21 21:35:17,468 django.channels.server — HTTP GET /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/ 500 [0.16, 172.18.0.1:48504]
+[INFO] 2025-10-21 21:35:35,839 django.channels.server — HTTP GET /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155 200 [0.03, 172.18.0.1:59806]
+[INFO] 2025-10-21 21:35:36,351 django.channels.server — HTTP GET /media/uploads/properties/cancun.webp 200 [0.05, 172.18.0.1:59806]
+[ERROR] 2025-10-21 21:35:37,458 django.request — Internal Server Error: /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/djangobnb_backend/property/api.py", line 118, in property_reservations
+    serializer = ReservationsListSerializer(reservations, safe=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'safe'
+[ERROR] 2025-10-21 21:35:37,472 django.channels.server — HTTP GET /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/ 500 [0.08, 172.18.0.1:52196]
+[ERROR] 2025-10-21 21:48:35,461 django.request — Internal Server Error: /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/djangobnb_backend/property/api.py", line 118, in property_reservations
+    serializer = ReservationsListSerializer(reservations, safe=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'safe'
+[ERROR] 2025-10-21 21:48:35,502 django.channels.server — HTTP GET /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/ 500 [0.80, 172.18.0.1:49568]
+[ERROR] 2025-10-21 21:52:09,348 django.request — Internal Server Error: /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/djangobnb_backend/property/api.py", line 118, in property_reservations
+    serializer = ReservationsListSerializer(reservations, safe=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'safe'
+[ERROR] 2025-10-21 21:52:09,362 django.channels.server — HTTP GET /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/ 500 [0.10, 172.18.0.1:44328]
+[ERROR] 2025-10-21 21:52:22,222 django.request — Internal Server Error: /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/djangobnb_backend/property/api.py", line 118, in property_reservations
+    serializer = ReservationsListSerializer(reservations, safe=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'safe'
+[ERROR] 2025-10-21 21:52:22,228 django.channels.server — HTTP GET /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/ 500 [0.04, 172.18.0.1:44328]
+[INFO] 2025-10-21 21:52:32,848 django.channels.server — HTTP OPTIONS /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/book/ 200 [0.00, 172.18.0.1:43950]
+[INFO] 2025-10-21 21:52:32,978 django.channels.server — HTTP POST /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/book/ 200 [0.07, 172.18.0.1:43950]
+[INFO] 2025-10-21 21:52:58,802 django.channels.server — HTTP GET /api/auth/myreservations/ 200 [0.03, 172.18.0.1:51012]
+[INFO] 2025-10-21 21:59:14,216 django.channels.server — HTTP GET /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155 200 [0.04, 172.18.0.1:60658]
+[ERROR] 2025-10-21 21:59:14,767 django.request — Internal Server Error: /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/djangobnb_backend/property/api.py", line 118, in property_reservations
+    serializer = ReservationsListSerializer(reservations, safe=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'safe'
+[ERROR] 2025-10-21 21:59:14,775 django.channels.server — HTTP GET /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/ 500 [0.05, 172.18.0.1:60670]
+[ERROR] 2025-10-21 21:59:15,042 django.request — Internal Server Error: /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/djangobnb_backend/property/api.py", line 118, in property_reservations
+    serializer = ReservationsListSerializer(reservations, safe=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/serializers.py", line 116, in __init__
+    super().__init__(**kwargs)
+TypeError: Field.__init__() got an unexpected keyword argument 'safe'
+[ERROR] 2025-10-21 21:59:15,047 django.channels.server — HTTP GET /api/properties/38e53dba-b3bb-4148-b6bc-66e01602f155/reservations/ 500 [0.04, 172.18.0.1:60670]
